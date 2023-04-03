@@ -89,7 +89,7 @@ const employee_update = async(req,res) =>{
 
 const employee_delete = async (req,res)=>{
     try{
-        const removeEmployee = await Employee.findByIdAndDelete(req.params.EmployeeId);
+        const removeEmployee = await Employee.findByIdAndDelete(req.params.employeeId);
        res.json(removeEmployee)
     }catch(error){
         res.json({message:error})
